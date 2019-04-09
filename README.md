@@ -1,25 +1,27 @@
 ## **Spring cloud eureka service**
 
+Implementation of service discovery using Spring Cloud and Netflix Eureka service discovery agent.
 When services are bootstrapping, they will register their IPs with the Eureka Service.
 Ribbon will contact the Eureka service to retrieve service location information and then cache it locally.
+When service instances are added/removed, they will update the service discovery agent and become available to process user requests.
 
 ## **Building**
 
-1. To compile source code and build Docker image:
+To compile source code and build Docker image:
 ```
 mvn clean package docker:build
 ```
 
 ## **Running**
 
-1. To start service in Docker container:
+To start service in Docker container:
 ```
 docker run marinasavchenko/onlinestore-eurekasrv:v1
 ```
 
 ## **Running the tests**
 
-1.To run tests via Maven:
+To run tests via Maven:
 ```
 mvn clean test
 ```
