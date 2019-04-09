@@ -5,6 +5,16 @@ When services are bootstrapping, they will register their IPs with the Eureka Se
 Ribbon will contact the Eureka service to retrieve service location information and then cache it locally.
 When service instances are added/removed, they will update the service discovery agent and become available to process user requests.
 
+## **Technology stack**
+
+* Java 8
+* Spring Boot 2
+* Spring Cloud 2
+* Netflix Eureka
+
+* Maven
+* Docker
+
 ## **Building**
 
 To compile source code and build Docker image:
@@ -25,12 +35,3 @@ To run tests via Maven:
 ```
 mvn clean test
 ```
-
-## **Technology stack**
-
-* Java
-* Spring Boot
-* Spring Cloud
-
-* Maven
-* Docker
